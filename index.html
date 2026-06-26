@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="EventKitchen project page with paper, code, dataset, demo, and abstract."
+    >
+    <meta property="og:title" content="EventKitchen">
+    <meta property="og:description" content="Project page for EventKitchen.">
+    <meta property="og:image" content="assets/images/teaser.jpg">
+    <meta property="og:type" content="website">
+    <title>EventKitchen</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="paper-header">
+        <div class="container">
+          <p class="dataset-name">EventKitchen Dataset</p>
+          <h1>
+            <span>Cooking Beyond Frames:</span>
+            <span>A Stereo Event Camera Dataset in the Kitchen</span>
+          </h1>
+          <!-- <p class="tagline">
+            A multimodal kitchen dataset with synchronized RGB, depth, stereo RGB,
+            and stereo event streams for fine-grained activity understanding.
+          </p> -->
+
+          <div class="authors" aria-label="Authors">
+            <a href="https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/intelligent-systems/pattern-recognition-bioinformatics/computer-vision-lab/people/chengming-feng" target="_blank" rel="noopener">Chengming Feng<sup>1</sup>,</a>
+            <a href="https://www.tudelft.nl/en/ewi/over-de-faculteit/afdelingen/intelligent-systems/pattern-recognition-bioinformatics/computer-vision-lab/people/hesam-araghi" target="_blank" rel="noopener">Hesam Araghi<sup>1</sup>,</a>
+            <a href="#">Liming Zheng<sup>1</sup>,</a>
+            <a href="#">Julien Dupeyroux<sup>2</sup>,</a>
+            <a href="#">Xucong Zhang<sup>1</sup>,</a>
+            <a href="#">Jan van Gemert<sup>1</sup>,</a>
+            <a href="#">Nergis Tömen<sup>1</sup></a>
+          </div>
+
+          <p class="affiliation">
+            <sup>1</sup>Delft University of Technology &nbsp;&middot;&nbsp; <sup>2</sup>STMicroelectronics
+          </p>
+          <p class="venue">ECCV 2026</p>
+
+          <nav class="resource-links" aria-label="Project resources">
+            <a class="resource-link" href="#" aria-label="Open arXiv paper">
+              <span class="resource-icon arxiv-icon" aria-hidden="true">arXiv</span>
+              <span>arXiv</span>
+            </a>
+            <a class="resource-link" href="#" aria-label="Open code repository">
+              <svg class="resource-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m8 9-4 3 4 3"></path>
+                <path d="m16 9 4 3-4 3"></path>
+                <path d="m14 4-4 16"></path>
+              </svg>
+              <span>Code</span>
+            </a>
+            <a class="resource-link" href="#" aria-label="Open dataset">
+              <svg class="resource-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="7" ry="3"></ellipse>
+                <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path>
+                <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path>
+              </svg>
+              <span>Dataset</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="demo-section" aria-labelledby="demo-title">
+        <div class="container">
+          <h2 id="demo-title">Data Demo</h2>
+          <figure class="demo">
+            <video
+              src="assets/video/teaser.mp4"
+              poster="assets/images/teaser.jpg"
+              controls
+              playsinline
+            ></video>
+            <figcaption>
+              EventKitchen captures synchronized 2 x events, 3 x RGB, 1 x depth, and 1 IMU
+              data streams in the kitchens.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="abstract-section" aria-labelledby="abstract-title">
+        <div class="container narrow">
+          <h2 id="abstract-title">Abstract</h2>
+          <p>
+            Event cameras, also known as neuromorphic cameras, have gained significant attention in recent years due to their high temporal resolution, high dynamic range, and low power consumption. While many studies and datasets in neuromorphic vision have focused on automotive and drone applications, human-centric daily-life scenarios remain largely underrepresented, despite their importance for developing and benchmarking event-based perception systems. Moreover, the few existing event-based human activity datasets are typically recorded with scripted human actions, limiting their ability to capture natural human behaviors.
+            In this paper, we introduce <b>EventKitchen</b>, a large-scale stereo egocentric event camera benchmark dataset of human cooking activities in the kitchen. EventKitchen is collected from 10 participants in 13 diverse kitchens, where the participants wear a helmet with multiple sensors and naturally perform cooking activities, without any scripted actions. EventKitchen comprises 5.5 hours of event footage with synchronized RGB, depth, and IMU data. We provide human annotations for 10,762 action segments and 13,482 bounding boxes. We train baseline models on EventKitchen to perform multiple event-based tasks, including action recognition, object detection, and stereo depth estimation. By capturing natural, real-world human activities, EventKitchen establishes a challenging benchmark for neuromorphic vision beyond autonomous driving.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
