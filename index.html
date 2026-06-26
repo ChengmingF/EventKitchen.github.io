@@ -107,7 +107,8 @@
           <h2 id="download-title">Download Dataset</h2>
           <p>
             The EventKitchen dataset is hosted on 4TU.ResearchData with Delft University of Technology. Please open
-            the dataset page below and access to the dataset.
+            the dataset page below and access to the dataset. There are 14 recording sessions in the dataset. Each session is compressed in the zip file named as <b>Kitchen_*.zip</b>.
+              Download all zip files and unzip them.
           </p>
           <a
             class="download-button"
@@ -117,6 +118,53 @@
           >
             Open 4TU Dataset Page
           </a>
+          <div class="dataset-structure">
+            <h3>Dataset Structure</h3>
+            <p>
+              Each <code>Kitchen_ID</code> folder is the parent folder for its
+              cooking activity sessions. For example, the structure is:
+            </p>
+            <pre class="folder-tree"><code>Kitchen_ID/
+├── cooking_activity_01 (e.g. cereal_bowl)/
+│   ├── dataset/
+│   │   ├── DEPTH/
+│   │   │   ├── DEPTH.avi
+│   │   │   └── DEPTH_timestamp.csv
+│   │   ├── DIMU/
+│   │   │   └── DIMU.csv
+│   │   ├── DRGB/
+│   │   │   ├── DRGB.mp4
+│   │   │   └── DRGB_timestamp.csv
+│   │   ├── IMU/
+│   │   │   └── IMU.csv
+│   │   ├── LeftEvent/
+│   │   │   └── LeftEvent.hdf5
+│   │   ├── LeftRGB/
+│   │   │   ├── LeftRGB.mp4
+│   │   │   └── LeftRGB_timestamp.csv
+│   │   ├── RightEvent/
+│   │   │   └── RightEvent.hdf5
+│   │   └── RightRGB/
+│   │       ├── RightRGB.mp4
+│   │       └── RightRGB_timestamp.csv
+│   └── Annotations/
+│       ├── actions/
+│       │   └── cooking_activity_action.csv
+│       └── objects/
+│           ├── cooking_activity_DRGB_bbox.csv
+│           ├── cooking_activity_LeftEvent_bbox.csv
+│           └── cooking_activity_RightEvent_bbox.csv
+├── cooking_activity_02/
+│   └── ...
+└── ...</code></pre>
+            <ul class="structure-notes">
+              <li><code>dataset</code> stores each data streams. In each <b>RGB</b> data folder, there are the video in .mp4 format and the corrsponding global synchronization timesatmp
+                in timestamp.csv. In each <b>Event</b> data folder, events are saved in .hdf5 file in the <a href="https://dsec.ifi.uzh.ch/data-format/" target="_blank" rel="noopener">DSEC dataset</a> format.
+                In the <b>DIMU</b> folder saves the 6-axis IMU from the Realsense camera. <b>Note:</b> we also provide another 9-axis IMU data in <b>IMU</b> folder, but it is not calibrated.</li>
+              <li><code>Annotations</code> stores the human annotations of bounding boxes and action segments.</li>
+              <li>Please refer to the EventKitchen toolkit to properly read the data and annotations</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
