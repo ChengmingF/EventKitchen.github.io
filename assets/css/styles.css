@@ -161,7 +161,7 @@ h1 span {
   color: var(--ink);
   font-family: Avenir Next, Avenir, "Gill Sans", sans-serif;
   font-size: 1.05rem;
-  font-weight: 760;
+  font-weight: 400;
   line-height: 1;
   text-decoration: none;
   transition:
@@ -248,6 +248,52 @@ h2 {
   font-size: 1.22rem;
 }
 
+.download-section {
+  padding: 58px 0 90px;
+  background: #ffffff;
+}
+
+.download-section p,
+.download-steps {
+  color: #303030;
+  font-size: 1.18rem;
+}
+
+.download-section p {
+  margin: 0 0 22px;
+}
+
+.download-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-family: Avenir Next, Avenir, "Gill Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 760;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  background: #175c56;
+}
+
+.download-steps {
+  margin: 0;
+  padding-left: 1.35em;
+}
+
+.download-steps li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
 @media (max-width: 620px) {
   .paper-header {
     padding-top: 50px;
@@ -263,7 +309,8 @@ h2 {
   }
 
   .demo-section,
-  .abstract-section {
+  .abstract-section,
+  .download-section {
     padding-block: 44px;
   }
 
