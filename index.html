@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="EventKitchen project page with paper, code, dataset, demo, and abstract."
+      content="EventKitchen project page."
     >
     <meta property="og:title" content="EventKitchen">
     <meta property="og:description" content="Project page for EventKitchen.">
@@ -45,16 +45,26 @@
 
           <nav class="resource-links" aria-label="Project resources">
             <a class="resource-link" href="#" aria-label="Open arXiv paper">
-              <span class="resource-icon arxiv-icon" aria-hidden="true">arXiv</span>
+              <svg class="resource-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"></path>
+                <path d="M14 2v5h5"></path>
+                <path d="M9 13h6"></path>
+                <path d="M9 17h6"></path>
+                <path d="M9 9h1"></path>
+              </svg>
               <span>arXiv</span>
             </a>
-            <a class="resource-link" href="#" aria-label="Open code repository">
-              <svg class="resource-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m8 9-4 3 4 3"></path>
-                <path d="m16 9 4 3-4 3"></path>
-                <path d="m14 4-4 16"></path>
+            <a
+              class="resource-link"
+              href="https://github.com/ChengmingF/EventKitchen_toolkit"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open EventKitchen toolkit repository"
+            >
+              <svg class="resource-icon github-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C18.9 5.3 19.9 5.6 19.9 5.6c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"></path>
               </svg>
-              <span>Code</span>
+              <span>EventKitchen Toolkit</span>
             </a>
             <a
               class="resource-link"
@@ -162,7 +172,7 @@
                 in timestamp.csv. In each <b>Event</b> data folder, events are saved in .hdf5 file in the <a href="https://dsec.ifi.uzh.ch/data-format/" target="_blank" rel="noopener">DSEC dataset</a> format.
                 In the <b>DIMU</b> folder saves the 6-axis IMU from the Realsense camera. <b>Note:</b> we also provide another 9-axis IMU data in <b>IMU</b> folder, but it is not calibrated.</li>
               <li><code>Annotations</code> stores the human annotations of bounding boxes and action segments.</li>
-              <li>Please refer to the EventKitchen toolkit to properly read the data and annotations</li>
+              <li>Please refer to the <a href="https://github.com/ChengmingF/EventKitchen_toolkit/" target="_blank" rel="noopener">EventKitchen toolkit</a> to properly read the data and annotations</li>
             </ul>
           </div>
         </div>

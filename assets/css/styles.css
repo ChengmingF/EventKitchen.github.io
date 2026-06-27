@@ -186,16 +186,9 @@ h1 span {
   stroke-linejoin: round;
 }
 
-.arxiv-icon {
-  display: inline-flex;
-  width: 34px;
-  align-items: center;
-  justify-content: center;
-  color: var(--warm);
-  font-family: Avenir Next, Avenir, "Gill Sans", sans-serif;
-  font-size: 0.86rem;
-  font-weight: 900;
-  letter-spacing: 0;
+.github-icon {
+  fill: currentColor;
+  stroke: none;
 }
 
 .demo-section {
