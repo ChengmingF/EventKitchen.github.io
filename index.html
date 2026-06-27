@@ -56,15 +56,17 @@
             </a>
             <a
               class="resource-link"
-              href="https://github.com/ChengmingF/EventKitchen_toolkit"
+              href="https://drive.google.com/drive/folders/1ZRUsGjP_UwXDRnBKk8wxO1s19B9xtRUx?usp=sharing"
               target="_blank"
               rel="noopener"
-              aria-label="Open EventKitchen toolkit repository"
+              aria-label="Open dataset"
             >
-              <svg class="resource-icon github-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C18.9 5.3 19.9 5.6 19.9 5.6c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"></path>
+              <svg class="resource-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="7" ry="3"></ellipse>
+                <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path>
+                <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path>
               </svg>
-              <span>Toolkit</span>
+              <span>Dataset (Google Drive)</span>
             </a>
             <a
               class="resource-link"
@@ -78,7 +80,19 @@
                 <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path>
                 <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path>
               </svg>
-              <span>Dataset</span>
+              <span>Dataset (4TU.ResearchData)</span>
+            </a>
+            <a
+              class="resource-link"
+              href="https://github.com/ChengmingF/EventKitchen_toolkit"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open EventKitchen toolkit repository"
+            >
+              <svg class="resource-icon github-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C18.9 5.3 19.9 5.6 19.9 5.6c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"></path>
+              </svg>
+              <span>Toolkit</span>
             </a>
           </nav>
         </div>
@@ -95,8 +109,8 @@
               playsinline
             ></video>
             <figcaption>
-              EventKitchen captures synchronized 2 x events, 3 x RGB, 1 x depth, and 1 IMU
-              data streams in the kitchens.
+              EventKitchen captures synchronized two event streams, three RGB streams,
+              one depth stream, and one IMU stream in kitchen environments.
             </figcaption>
           </figure>
         </div>
@@ -116,9 +130,9 @@
         <div class="container narrow">
           <h2 id="download-title">Download Dataset</h2>
           <p>
-            The EventKitchen dataset is hosted on 4TU.ResearchData with Delft University of Technology. Please open
-            the dataset page below and access to the dataset. There are 14 recording sessions in the dataset. Each session is compressed in the zip file named as <b>Kitchen_*.zip</b>.
-              Download all zip files and unzip them.
+            The EventKitchen dataset is hosted by Delft University of Technology. You can access the dataset through <b>4TU.ResearchData</b> or <b>Google Drive</b> below.
+            There are 14 recording sessions in the dataset. Each session is compressed as a zip file named <b>Kitchen_ID.zip</b>.
+            Download all zip files and unzip them.
           </p>
           <a
             class="download-button"
@@ -126,14 +140,57 @@
             target="_blank"
             rel="noopener"
           >
-            Open 4TU Dataset Page
+            4TU.ResearchData
           </a>
+          <a
+            class="download-button"
+            href="https://drive.google.com/drive/folders/1ZRUsGjP_UwXDRnBKk8wxO1s19B9xtRUx?usp=sharing"
+            target="_blank"
+            rel="noopener"
+          >
+            Google Drive
+          </a>
+          <p>We provide the EventKitchen toolkit to read the data and annotations.</p>
+          <a
+            class="download-button"
+            href="https://github.com/ChengmingF/EventKitchen_toolkit/"
+            target="_blank"
+            rel="noopener"
+          >
+            EventKitchen Toolkit
+          </a>
+          <p>
+            <b><span style="color: red;">Attention!</span></b> The compressed dataset is around 1 TB. Please make sure you have at least 2 TB of free storage space to download and unzip it.
+          </p>
           <div class="dataset-structure">
             <h3>Dataset Structure</h3>
             <p>
-              Each <code>Kitchen_ID</code> folder is the parent folder for its
-              cooking activity sessions. For example, the structure is:
+              Each <code>Kitchen_ID</code> folder contains its cooking activity
+              sessions. Each cooking activity contains two folders:
+              <b>dataset/</b> and <b>Annotations/</b>.
             </p>
+            <p>
+              <b>dataset/</b> stores the synchronized data streams:
+            </p>
+            <ul class="structure-notes">
+              <li>Stereo events from the stereo Prophesee Gen4 cameras under <b>LeftEvent/</b> and <b>RightEvent/</b>.</li>
+              <li>Stereo RGB videos and global timestamps per RGB frame from the stereo CMOS cameras under <b>LeftRGB/</b> and <b>RightRGB/</b>.</li>
+              <li>RGB video and global timestamps per RGB frame from the RealSense D435i/D455 camera under <b>DRGB/</b>.</li>
+              <li>Depth video and global timestamps per depth frame from the RealSense D435i/D455 camera under <b>DEPTH/</b>.</li>
+              <li>6-axis IMU data from the RealSense D435i/D455 camera under <b>DIMU/</b>.</li>
+              <li><b>Note:</b> we also provide additional 9-axis IMU data in <b>IMU/</b>, but it is not calibrated.</li>
+            </ul>
+            <p>
+              <b>Annotations/</b> stores labels for object detection and action recognition:
+            </p>
+            <ul class="structure-notes">
+              <li>Global action segments are saved in <b>actions/cooking_activity_action.csv</b>.</li>
+              <li>Bounding boxes on the left event camera are saved in <b>objects/cooking_activity_LeftEvent_bbox.csv</b>.</li>
+              <li>Bounding boxes on the right event camera are saved in <b>objects/cooking_activity_RightEvent_bbox.csv</b>.</li>
+              <li><b>Note:</b> we also provide bounding boxes on the RealSense D435i/D455 camera in <b>objects/cooking_activity_DRGB_bbox.csv</b>.</li>
+              <li>Please refer to the <a href="https://github.com/ChengmingF/EventKitchen_toolkit/" target="_blank" rel="noopener">EventKitchen toolkit</a> for more annotation details.</li>
+            </ul>
+            <p>The detailed dataset structure is shown below:</p>
             <pre class="folder-tree"><code>Kitchen_ID/
 ├── cooking_activity_01 (e.g. cereal_bowl)/
 │   ├── dataset/
@@ -167,13 +224,6 @@
 ├── cooking_activity_02/
 │   └── ...
 └── ...</code></pre>
-            <ul class="structure-notes">
-              <li><code>dataset</code> stores each data streams. In each <b>RGB</b> data folder, there are the video in .mp4 format and the corrsponding global synchronization timesatmp
-                in timestamp.csv. In each <b>Event</b> data folder, events are saved in .hdf5 file in the <a href="https://dsec.ifi.uzh.ch/data-format/" target="_blank" rel="noopener">DSEC dataset</a> format.
-                In the <b>DIMU</b> folder saves the 6-axis IMU from the Realsense camera. <b>Note:</b> we also provide another 9-axis IMU data in <b>IMU</b> folder, but it is not calibrated.</li>
-              <li><code>Annotations</code> stores the human annotations of bounding boxes and action segments.</li>
-              <li>Please refer to the <a href="https://github.com/ChengmingF/EventKitchen_toolkit/" target="_blank" rel="noopener">EventKitchen toolkit</a> to properly read the data and annotations</li>
-            </ul>
           </div>
         </div>
       </section>
