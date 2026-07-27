@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Download and inspect the EventKitchen dataset.">
+    <title>Download | EventKitchen</title>
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260727">
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Site navigation">
+      <div class="site-nav__inner">
+        <a class="site-nav__link site-nav__link--brand" href="index.html">EventKitchen</a>
+        <a class="site-nav__link is-active" href="download.html" aria-current="page">Download</a>
+        <a class="site-nav__link" href="action-recognition.html">Action Recognition</a>
+        <a class="site-nav__link" href="object-detection.html">Object Detection</a>
+        <a class="site-nav__link" href="depth-estimation.html">Depth Estimation</a>
+      </div>
+    </nav>
+
+    <main class="download-page">
+      <section class="download-section" aria-labelledby="download-title">
+        <div class="container narrow">
+          <h2 id="download-title">Download Dataset</h2>
+          <p style="text-align: justify;">
+            The EventKitchen dataset is hosted by <b>4TU.ResearchData</b> with Delft University of Technology. You can access the dataset through 4TU.ResearchData below.
+            There are 14 recording sessions in the dataset. Each session is compressed as a zip file named <b>Kitchen_ID.zip</b>.
+            Download all zip files and unzip them.
+          </p>
+          <a
+            class="download-button"
+            href="https://data.4tu.nl/datasets/583f8a2f-5448-4a9f-84c7-caaca92b1835"
+            target="_blank"
+            rel="noopener"
+          >
+            4TU.ResearchData
+          </a>
+          <p>We provide the EventKitchen toolkit to read the data and annotations.</p>
+          <a
+            class="download-button"
+            href="https://github.com/ChengmingF/EventKitchen_toolkit/"
+            target="_blank"
+            rel="noopener"
+          >
+            EventKitchen Toolkit
+          </a>
+          <p>
+            <b><span style="color: red;">Attention!</span></b> The compressed dataset is around 900 GB. Please make sure you have at least 2 TB of free storage space to download and unzip it.
+          </p>
+
+          <div class="dataset-structure">
+            <h3>Dataset Structure</h3>
+            <p>
+              The dataset includes 14 recording sessions that are saved as <code>Session_ID</code> separately. Each <code>Session_ID</code> folder contains its recorded cooking activities (e.g. cereal_bowl, tea). Each cooking activity folder contains two folders:
+              <b>dataset/</b> and <b>Annotations/</b>, which store the data and annotations respectively.
+            </p>
+            <p>
+              <b>dataset/</b> stores the synchronized data streams:
+            </p>
+            <ul class="structure-notes">
+              <li>Stereo events from the stereo Prophesee Gen4 cameras under <b>LeftEvent/</b> and <b>RightEvent/</b>.</li>
+              <li>Stereo RGB videos and global timestamps per RGB frame from the stereo CMOS cameras under <b>LeftRGB/</b> and <b>RightRGB/</b>.</li>
+              <li>RGB video and global timestamps per RGB frame from the RealSense D435i/D455 camera under <b>DRGB/</b>.</li>
+              <li>Depth video and global timestamps per depth frame from the RealSense D435i/D455 camera under <b>DEPTH/</b>.</li>
+              <li>6-axis IMU data from the RealSense D435i/D455 camera under <b>DIMU/</b>.</li>
+              <li><b>Note:</b> we also provide additional 9-axis IMU data in <b>IMU/</b>, but it is not calibrated.</li>
+            </ul>
+            <p>
+              <b>Annotations/</b> stores labels for object detection and action recognition:
+            </p>
+            <ul class="structure-notes annotation-notes">
+              <li>Global action segments are saved in <b>actions/cooking_activity_action.csv</b>.</li>
+              <li>Bounding boxes on the left event camera are saved in <b>objects/cooking_activity_LeftEvent_bbox.csv</b>.</li>
+              <li>Bounding boxes on the right event camera are saved in <b>objects/cooking_activity_RightEvent_bbox.csv</b>.</li>
+              <li><b>Note:</b> we also provide bounding boxes on the RealSense D435i/D455 camera in <b>objects/cooking_activity_DRGB_bbox.csv</b>.</li>
+              <li>Please refer to the <a href="https://github.com/ChengmingF/EventKitchen_toolkit/" target="_blank" rel="noopener">EventKitchen toolkit</a> for more annotation details.</li>
+            </ul>
+            <p>The detailed dataset structure is shown below:</p>
+            <pre class="folder-tree"><code>Kitchen_ID/
+├── cooking_activity_01 (e.g. cereal_bowl)/
+│   ├── dataset/
+│   │   ├── DEPTH/
+│   │   │   ├── DEPTH.avi
+│   │   │   └── DEPTH_timestamp.csv
+│   │   ├── DIMU/
+│   │   │   └── DIMU.csv
+│   │   ├── DRGB/
+│   │   │   ├── DRGB.mp4
+│   │   │   └── DRGB_timestamp.csv
+│   │   ├── IMU/
+│   │   │   └── IMU.csv
+│   │   ├── LeftEvent/
+│   │   │   └── LeftEvent.hdf5
+│   │   ├── LeftRGB/
+│   │   │   ├── LeftRGB.mp4
+│   │   │   └── LeftRGB_timestamp.csv
+│   │   ├── RightEvent/
+│   │   │   └── RightEvent.hdf5
+│   │   └── RightRGB/
+│   │       ├── RightRGB.mp4
+│   │       └── RightRGB_timestamp.csv
+│   └── Annotations/
+│       ├── actions/
+│       │   └── cooking_activity_action.csv
+│       └── objects/
+│           ├── cooking_activity_DRGB_bbox.csv
+│           ├── cooking_activity_LeftEvent_bbox.csv
+│           └── cooking_activity_RightEvent_bbox.csv
+├── cooking_activity_02/
+│   └── ...
+└── ...</code></pre>
+          </div>
+        </div>
+        <div class="container narrow">
+          <h2 id="download-title">Download Calibration</h2>
+            <p style="text-align: justify;">
+                We provide intrinsic and extrinsic calibrations among sensors, which is saved in a zip file namely <b>Calibration.zip</b> in the <a href="https://chengmingf.github.io/EventKitchen.github.io/" target="_blank" rel="noopener">4TU.ResearchData</a>.
+                As we used IntelRealSense D435i and D455 for the data collection seperately, there are two sets of calibration results in the zip file. The correspondence of the calibration set and recording session is listed below:
+                <ul class="structure-notes">
+                <li><b>D435i</b>: Session 1, Session 2, Session 3, Session 4, Session 5 (coffee, tea, vege_salad, cut_cake), Session 6.</li>
+                <li><b>D455</b>: Session 5 (fry_bacon, fry_pepper, fry_egg), Session 7, Session 8, Session 9, Session 10, Session 11, Session 12, Session 13, Session 14.</li>
+                <li><b><span style="color: red;">Attention!</span></b> Be careful that the sequences in Session 5 are collected with two sets of sensors, as listed above.</li>
+                </ul>
+                The calibrations are all done with OpenCV. We provide the code in the <a href="https://github.com/ChengmingF/EventKitchen_toolkit/" target="_blank" rel="noopener">EventKitchen toolkit</a>
+                to load calibration results. For more calibration details, please refer to the paper.
+            </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

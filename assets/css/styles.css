@@ -27,6 +27,62 @@ body {
   line-height: 1.6;
 }
 
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+}
+
+.site-nav__inner {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 10px 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.site-nav__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.site-nav__link {
+  flex: 0 0 auto;
+  padding: 8px 11px;
+  border-radius: 4px;
+  color: var(--muted);
+  font-family: Avenir Next, Avenir, "Gill Sans", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.site-nav__link:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.site-nav__link--brand {
+  margin-right: 4px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.site-nav__link.is-active {
+  background: var(--accent);
+  color: #ffffff;
+}
+
 a {
   color: var(--accent);
   text-decoration-thickness: 0.08em;
@@ -135,6 +191,7 @@ h1 span {
 
 .venue {
   color: var(--warm);
+  font-size: 1.5rem;
   font-weight: 800;
 }
 
@@ -371,4 +428,59 @@ figure.demo figcaption {
 
 .annotation-notes {
   text-align: left;
+}
+
+.task-page {
+  min-height: calc(100vh - 57px);
+  padding: 72px 0 96px;
+}
+
+.task-page__header,
+.task-page__content {
+  max-width: 820px;
+}
+
+.task-page h1 {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.05;
+  text-align: left;
+}
+
+.task-page h1.task-page__title--compact {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.task-page__intro {
+  max-width: 740px;
+  margin: 20px 0 0;
+  color: var(--ink);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.task-page__content {
+  margin-top: 48px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.task-page__content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  text-align: left;
+}
+
+.task-page__placeholder {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+.task-page__baseline-copy {
+  color: #000000;
+}
+
+.download-page .download-section {
+  padding-top: 72px;
 }

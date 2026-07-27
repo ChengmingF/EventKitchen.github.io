@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EventKitchen action recognition benchmark.">
+    <title>Action Recognition | EventKitchen</title>
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260727">
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Site navigation">
+      <div class="site-nav__inner">
+        <a class="site-nav__link site-nav__link--brand" href="index.html">EventKitchen</a>
+        <a class="site-nav__link" href="download.html">Download</a>
+        <a class="site-nav__link is-active" href="action-recognition.html" aria-current="page">Action Recognition</a>
+        <a class="site-nav__link" href="object-detection.html">Object Detection</a>
+        <a class="site-nav__link" href="depth-estimation.html">Depth Estimation</a>
+      </div>
+    </nav>
+
+    <main class="task-page">
+      <header class="container task-page__header">
+        <h1 class="task-page__title--compact">Action Recognition</h1>
+        <p class="task-page__intro">
+          EventKitchen provides in total 10,762 actions segments with 268 action classes over all recording sequences. Three human annotators are assigned to annotate the synchronized RGB video. Then, the annotations are aligned to the 
+          synchronized stereo event data streams. Please refer to the paper for the annotation pipeline and statistics.<br>
+          The action annotations are saved in <b>actions/cooking_activity_action.csv</b> of the recording session tree as described in the <b><a href="download.html">Download</a></b>.
+          We provide the details of the action annotations and an example script to load the action annotations in the <a href="https://github.com/ChengmingF/EventKitchen_toolkit/" target="_blank" rel="noopener">EventKitchen toolkit</a>.
+        </p>
+      </header>
+      <section class="container task-page__content" aria-labelledby="action-content-title">
+        <h2 id="action-content-title">Baselines</h2>
+        <p class="task-page__placeholder task-page__baseline-copy">We evaluate two action recognition algorithms <a href="https://github.com/mit-han-lab/temporal-shift-module" target="_blank" rel="noopener">TSM</a> and 
+            <a href="https://github.com/SwinTransformer/Video-Swin-Transformer" target="_blank" rel="noopener">Swin</a> on EventKitchen. To reproduce the results reported in the paper,
+            please refer to their official GitHub page and the implementation details reported in the paper.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
