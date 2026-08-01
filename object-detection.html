@@ -24,18 +24,18 @@
         <p class="task-page__intro">
           EventKitchen provides in total 13,482 bounding boxes of 12 object classes including: 1. Bowl, 2. Box, 3. Chopping board, 4. Cup, 5. Fork, 6. Knife, 
           7. Pan, 8. Plastic packaging, 9. Plate, 10. Spatula, 11. Spoon, and 12. Teapot. Two human annotators are firstly assigned to annotate the synchronized RGB data 
-          at an annotation frequency of 1 frame per 4 seconds. Next, the RGB annotations are projected to the synchronized event data streams by the camera matrix and 
-          depth stream. More details of the annotation pipeline and statistics are reported in the paper. <br>
+          at an annotation frequency of 1 frame per 4 seconds. Then, the RGB annotations are projected to the synchronized event data streams by the calibration matrix and 
+          depth stream. More details of the annotation pipeline and statistics are reported in the paper. <br> <br>
 
           As described in <b><a href="download.html">Download</a></b>, in each recording session tree, the annotated bounding box of the left event camera is saved in <b>objects/cooking_activity_LeftEvent_bbox.csv</b>, of right event camera 
           is saved in <b>objects/cooking_activity_RightEvent_bbox.csv</b>. We also provide the original RGB annotations in <b>objects/cooking_activity_DRGB_bbox.csv</b>. We provide more details of the annotation format and an script to load
           the annotation in the <a href="https://github.com/ChengmingF/EventKitchen_toolkit/" target="_blank" rel="noopener">EventKitchen toolkit</a>
         </p>
       </header>
-      <section class="container task-page__content" aria-labelledby="detection-content-title">
+      <!-- <section class="container task-page__content" aria-labelledby="detection-content-title">
         <h2 id="detection-content-title">Benchmark Details</h2>
         <p class="task-page__placeholder">Content to be added.</p>
-      </section>
+      </section> -->
     </main>
   </body>
 </html>

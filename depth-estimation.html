@@ -22,13 +22,23 @@
       <header class="container task-page__header">
         <h1 class="task-page__title--compact">Depth Estimation</h1>
         <p class="task-page__intro">
-          Evaluation protocols, baseline models, and stereo depth estimation results will be presented here.
+          EventKitchen provides 5.5 hours of depth stream at 15 fps with the resolution of 1280 x 720 from the Intel RealSense D435i/D455 camera, resulting in in total 297,547
+          raw depth maps. The EventKitchen conduct stereo depth estimation, where we project the depth map to the left event camera (can also project to the right event camera) and
+          serve as depth ground truth. Please refer to the paper for more details of the statistics. <br><br>
+          The depth maps are saved in .avi videos, with the corresponding global timestamps per frame saved in .csv file, as described in <b><a href="download.html">Download</a></b>. We provide scripts to extract
+          depth maps and rectify data in the <a href="https://github.com/ChengmingF/EventKitchen_toolkit/" target="_blank" rel="noopener">EventKitchen toolkit</a>. <br><br>
         </p>
+        <!-- <div class="dataset-structure">
+            <h3>Rectification</h3>
+            <p>
+                
+            </p>
+        </div> -->
       </header>
-      <section class="container task-page__content" aria-labelledby="depth-content-title">
+      <!-- <section class="container task-page__content" aria-labelledby="depth-content-title">
         <h2 id="depth-content-title">Benchmark Details</h2>
         <p class="task-page__placeholder">Content to be added.</p>
-      </section>
+      </section> -->
     </main>
   </body>
 </html>
